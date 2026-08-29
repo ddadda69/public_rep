@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Enfoque de alimentación basado en comida real">
+  <title>Enfoque de alimentación</title>
+
+  <style>
+    :root {
+      --bg: #f4f6f1;
+      --card: #ffffff;
+      --text: #20251f;
+      --muted: #697067;
+      --accent: #3f6b4f;
+      --accent-light: #e8f0e9;
+      --border: #e1e6df;
+      --danger: #8a4038;
+      --danger-light: #f8ecea;
+      --blue: #3d6178;
+      --blue-light: #eaf1f5;
+      --shadow: 0 8px 30px rgba(31, 42, 34, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .container {
+      width: min(100% - 32px, 780px);
+      margin: 0 auto;
+      padding: 34px 0 60px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 8px 30px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 8vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .intro {
+      margin: 18px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-top: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h2 span {
+      margin-right: 5px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: 750;
+    }
+
+    em {
+      font-style: normal;
+      font-weight: 650;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      margin: 13px 0;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 5px;
+      top: 0;
+      color: var(--accent);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .avoid {
+      background: var(--danger-light);
+      border-color: #efd8d4;
+    }
+
+    .avoid h2 {
+      color: var(--danger);
+    }
+
+    .avoid li::before {
+      color: var(--danger);
+    }
+
+    .info {
+      background: var(--blue-light);
+      border-color: #d8e4eb;
+    }
+
+    .info h2 {
+      color: var(--blue);
+    }
+
+    .highlight {
+      background: var(--accent-light);
+      border: 1px solid #d5e3d7;
+      border-radius: 15px;
+      padding: 17px 18px;
+      margin-top: 18px;
+    }
+
+    .highlight p {
+      margin: 0;
+    }
+
+    .metabolic {
+      background: #f7f5ed;
+      border-color: #e9e4d5;
+    }
+
+    .metabolic h2 {
+      color: #6b6245;
+    }
+
+    .key {
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 28px 10px 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .container {
+        width: min(100% - 20px, 780px);
+        padding-top: 18px;
+      }
+
+      header {
+        padding: 15px 8px 22px;
+      }
+
+      section {
+        padding: 20px 18px;
+        border-radius: 17px;
+        margin-top: 14px;
+      }
+
+      h2 {
+        font-size: 21px;
+        margin-bottom: 15px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      li {
+        padding-left: 25px;
+        margin: 11px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <div class="eyebrow">Alimentación</div>
+      <h1>Enfoque de alimentación</h1>
+      <p class="intro">
+        Alimentación basada principalmente en comida real,
+        priorizando los alimentos en su forma natural y completa.
+      </p>
+    </header>
+
+    <section>
+      <p>
+        Yo probaría una alimentación basada principalmente en
+        <em>comida real</em>, priorizando los alimentos en su forma natural y
+        completa —manteniendo, en la medida de lo posible, su matriz original—
+        y evitando sobre todo aquellos que provocan picos rápidos de glucosa.
+      </p>
+
+      <p>
+        La idea es reducir las subidas repetidas de
+        <em>glucosa e insulina</em> y facilitar que el organismo utilice la
+        grasa acumulada como fuente de energía. No se trata de hacer una dieta
+        <em>low-carb</em> rígida ni de comer poco, sino de elegir alimentos que
+        proporcionen buena saciedad —principalmente
+        <em>proteína + grasa natural + fibra</em>— y ajustar los carbohidratos
+        naturales según la respuesta individual.
+      </p>
+
+      <p>
+        Al principio puede costar reducir ciertos carbohidratos porque el
+        cuerpo está acostumbrado a utilizarlos como fuente rápida de energía
+        y puede «pedirlos» con más intensidad. Especialmente cuando se han
+        consumido habitualmente azúcar, pan, dulces o harinas refinadas,
+        pueden aparecer antojos fuertes. Con el tiempo, el organismo puede
+        adaptarse a obtener una mayor proporción de energía de las grasas y
+        esos antojos suelen disminuir.
+      </p>
+    </section>
+
+    <section>
+      <h2><span>🥩</span> Comería principalmente</h2>
+
+      <ul>
+        <li>
+          <strong>Carne</strong>, incluyendo su grasa natural
+        </li>
+
+        <li>
+          <strong>Pescado y marisco</strong>
+        </li>
+
+        <li>
+          <strong>Huevos enteros, incluida la yema.</strong>
+          Son un alimento muy completo: aportan proteína de alta calidad,
+          colina, vitaminas A, D, E y K, luteína y grasas dentro de su matriz
+          natural. Se pueden cocinar de cualquier forma: hervidos, revueltos,
+          fritos en aceite de oliva, al plato, etc.
+        </li>
+
+        <li>
+          <strong>Aguacate, aceitunas y frutos secos</strong>
+        </li>
+
+        <li>
+          <strong>Verduras:</strong> brócoli, calabacín, espinacas, tomate,
+          pimientos, berenjena, espárragos, champiñones, etc. Aportan
+          carbohidratos en cantidades relativamente bajas y acompañados de
+          fibra
+        </li>
+
+        <li>
+          <strong>Aceite de oliva</strong>, preferentemente virgen extra
+        </li>
+
+        <li>
+          <strong>Café solo</strong>, sin azúcar
+        </li>
+
+        <li>
+          <strong>Legumbres, patata, boniato, fruta y arroz integral</strong>,
+          en cantidades moderadas y preferentemente durante el día
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>🥛</span> Lácteos</h2>
+
+      <p>
+        Se pueden incluir lácteos de calidad y en su forma más natural, como
+        <em>quesos curados o artesanales y yogur natural sin azúcar ni sabores
+        añadidos</em>.
+      </p>
+
+      <p>
+        Evitaría principalmente los productos lácteos ultraprocesados, como
+        yogures saborizados, postres lácteos y productos similares.
+      </p>
+    </section>
+
+    <section>
+      <h2><span>☀️</span> Sol y vitamina D</h2>
+
+      <p>
+        También intentaría tomar <em>un poco de sol por la mañana</em>,
+        aunque sean unos minutos mientras desayuno.
+      </p>
+
+      <p>
+        La vitamina D tiene funciones hormonales importantes y participa en
+        numerosos procesos relacionados con el metabolismo, el sistema
+        inmunitario y la salud general. La exposición solar es una de las
+        formas naturales de obtenerla.
+      </p>
+    </section>
+
+    <section class="avoid">
+      <h2><span>🚫</span> Evitaría o reduciría al mínimo</h2>
+
+      <ul>
+        <li>
+          <strong>Azúcar</strong>, refrescos y zumos
+        </li>
+
+        <li>
+          Dulces, bollería, galletas y cereales azucarados
+        </li>
+
+        <li>
+          <strong>Cereales como trigo, avena y maíz</strong>, especialmente
+          sus derivados: pan, pasta, harinas y productos elaborados
+        </li>
+
+        <li>
+          Pizza y otros productos elaborados con harinas refinadas
+        </li>
+
+        <li>
+          Ultraprocesados
+        </li>
+
+        <li>
+          Alcohol
+        </li>
+
+        <li>
+          <strong>Embutidos</strong>, aunque sí se pueden incluir jamón y
+          lomo de buena calidad
+        </li>
+
+        <li>
+          Edulcorantes artificiales y la mayoría de los productos industriales
+          etiquetados como «sin azúcar»
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span>🍚</span> ¿Y los carbohidratos?</h2>
+
+      <p>
+        La idea no es considerar los carbohidratos «malos», sino
+        <em>priorizar los de mejor calidad y evitar especialmente los
+        refinados y aquellos que provocan picos repetidos de glucosa</em>.
+      </p>
+
+      <div class="highlight">
+        <p>
+          Por eso basaría el <strong>desayuno y la cena</strong> principalmente
+          en proteínas, verduras y grasas saludables, reservando los
+          carbohidratos más densos —como legumbres, patata, boniato, fruta o
+          arroz integral— para el periodo central del día y en cantidades
+          moderadas.
+        </p>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2><span>🩸</span> ¿Y el colesterol?</h2>
+
+      <p>
+        Según este enfoque, tener colesterol elevado no significa
+        necesariamente que haya que evitar alimentos que contienen colesterol,
+        como los huevos. El organismo fabrica por sí mismo la mayor parte del
+        colesterol que necesita y regula su producción en función de la
+        cantidad que recibe de la alimentación, por lo que
+        <em>el colesterol que comemos no se traduce directamente en el
+        colesterol que circula por la sangre</em>.
+      </p>
+
+      <p>
+        El foco estaría más bien en el
+        <em>exceso de azúcar, harinas refinadas y carbohidratos de rápida
+        absorción</em>. Cuando existe un exceso de glucosa y, especialmente,
+        de fructosa, el hígado puede activar la
+        <em>lipogénesis de novo</em>, un proceso mediante el cual transforma
+        parte de ese exceso de carbohidratos en nuevos ácidos grasos. Estos se
+        convierten en triglicéridos y pueden incorporarse a lipoproteínas como
+        las <em>VLDL</em>, que el hígado libera a la sangre. Cuando este
+        proceso está aumentado, especialmente en un contexto de resistencia
+        a la insulina, puede contribuir a un perfil lipídico desfavorable,
+        con <em>triglicéridos elevados, aumento de VLDL y alteraciones del
+        colesterol</em>.
+      </p>
+
+      <p>
+        Por eso, desde este planteamiento, el objetivo no sería obsesionarse
+        con eliminar alimentos que contienen colesterol de forma natural,
+        sino <em>reducir el exceso de azúcar y carbohidratos refinados que
+        puede sobrecargar metabólicamente al hígado y favorecer la
+        lipogénesis de novo</em>.
+      </p>
+    </section>
+
+    <section class="metabolic">
+      <h2><span>🧬</span> Lipogénesis de novo</h2>
+
+      <p>
+        La lipogénesis de novo es el proceso por el que el hígado transforma
+        el exceso de carbohidratos —sobre todo azúcares y harinas refinadas—
+        en ácidos grasos nuevos. Esos ácidos grasos se convierten en
+        triglicéridos y también contribuyen a aumentar la producción de
+        colesterol y de lipoproteínas, como las VLDL, que el hígado libera
+        a la sangre.
+      </p>
+
+      <p>
+        Cuando llega mucha glucosa o, especialmente, fructosa al hígado,
+        se genera acetil-CoA. Este compuesto se utiliza tanto para fabricar
+        ácidos grasos como para sintetizar colesterol. Dos reguladores
+        principales activan esta vía: uno estimulado por la insulina y otro
+        por los propios carbohidratos. La fructosa es particularmente potente
+        porque se metaboliza casi exclusivamente en el hígado.
+      </p>
+    </section>
+
+    <footer>
+      Información recopilada para lectura personal.
+    </footer>
+
+  </main>
+</body>
+</html>
