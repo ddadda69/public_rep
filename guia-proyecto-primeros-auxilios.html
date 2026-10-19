@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Guía paso a paso para comenzar un proyecto teórico de FP sobre técnicas de primeros auxilios, preparar cuatro entregas y convertir las indicaciones del profesor en un Word bien presentado con ayuda de IA.">
+  <meta property="og:title" content="Tu proyecto de primeros auxilios, paso a paso">
+  <meta property="og:description" content="No necesitas tenerlo todo claro hoy. Aquí tienes el primer paso, el índice, las cuatro entregas y cómo podemos preparar tu Word.">
+  <meta property="og:type" content="article">
+  <title>Tu proyecto de primeros auxilios · Guía paso a paso</title>
+  <style>
+    :root{--ink:#172a2c;--muted:#536669;--paper:#f8f7f3;--white:#fff;--teal:#196f6a;--teal-dark:#11534f;--teal-light:#e5f2ef;--coral:#ee9275;--coral-light:#fff0e9;--line:#dfe7e2;--shadow:0 16px 44px rgba(15,55,52,.055)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:26px}
+    body{margin:0;background:var(--paper);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+    a{color:var(--teal-dark);text-underline-offset:3px}
+    a:hover{text-decoration-thickness:2px}
+    button{font:inherit}
+    button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #e89c73;outline-offset:4px}
+    .wrap{width:min(100% - 40px,930px);margin-inline:auto}
+    .hero{position:relative;overflow:hidden;padding:42px 0 42px;background:radial-gradient(circle at 86% 0%,#fae0d4 0,transparent 37%),radial-gradient(circle at -10% 92%,#d4ebe4 0,transparent 40%),#f8f7f3}
+    .hero:after{content:"+";position:absolute;right:5%;top:30px;color:#e8a88d;font-size:160px;font-weight:700;line-height:1;opacity:.15;transform:rotate(12deg);pointer-events:none}
+    .hero-inner{position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #eaded7;padding:7px 12px;border-radius:99px;font-size:.77rem;letter-spacing:.095em;text-transform:uppercase;font-weight:800;color:#8b654e}
+    .mini-plus{display:grid;place-items:center;width:19px;height:19px;border-radius:6px;background:var(--coral-light);color:#ba6a50;font-size:17px;font-weight:900}
+    h1{font-size:clamp(2.3rem,7vw,4.65rem);letter-spacing:-.055em;line-height:1.07;max-width:780px;margin:22px 0 18px;font-weight:850}
+    .hi{color:var(--teal)}
+    .hero p{max-width:670px;color:var(--muted);font-size:clamp(1rem,3vw,1.18rem);margin:0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 19px;border:1px solid var(--teal);text-decoration:none;font-weight:750;cursor:pointer;line-height:1.3;transition:transform .15s,background .15s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--teal);color:white}
+    .btn-primary:hover{background:var(--teal-dark)}
+    .btn-secondary{background:rgba(255,255,255,.85);color:var(--teal)}
+    .hero-note{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.85);border:1px solid #dfe7dd;padding:17px 19px;border-radius:15px;max-width:720px;margin-top:31px;box-shadow:var(--shadow)}
+    .hero-note .spark{font-size:1.4rem;line-height:1.3}
+    .hero-note strong{color:var(--teal-dark)}
+    .toc{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}
+    .toc a{display:inline-block;text-decoration:none;padding:7px 13px;border:1px solid #dfe7e1;border-radius:99px;background:#fff;font-size:.85rem;font-weight:650}
+    main{padding-bottom:60px}
+    section.section{padding:42px 0 9px}
+    .section-header{margin-bottom:20px}
+    .kicker{display:block;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:850;color:var(--teal);margin-bottom:8px}
+    h2{font-size:clamp(1.67rem,5vw,2.35rem);line-height:1.17;letter-spacing:-.035em;margin:0 0 11px}
+    h3{font-size:1.14rem;line-height:1.35;margin:0 0 10px;letter-spacing:-.015em}
+    .section-intro{max-width:750px;color:var(--muted);margin:0;font-size:1.02rem}
+    .card{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+    .card p:last-child,.card ul:last-child{margin-bottom:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .icon-box{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:var(--teal-light);color:var(--teal-dark);font-size:1.35rem;margin-bottom:13px}
+    .card p{margin:0;color:var(--muted)}
+    .card strong{color:var(--ink)}
+    .callout{padding:21px 24px;border:1px solid #bcd8d0;border-radius:17px;background:linear-gradient(135deg,#e5f2ed,#f4faf5)}
+    .callout p{margin:0}
+    .callout strong{color:var(--teal-dark)}
+    .steps{display:grid;gap:13px}
+    .step{display:grid;grid-template-columns:48px 1fr;gap:15px;align-items:start;padding:21px;background:#fff;border:1px solid var(--line);border-radius:18px}
+    .n{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--teal);color:white;font-size:1.05rem;font-weight:850}
+    .step p{margin:0;color:var(--muted)}
+    .step h3{margin:1px 0 6px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+    ul.clean{list-style:none;margin:0;padding:0}
+    ul.clean li{position:relative;padding-left:23px;margin:11px 0}
+    ul.clean li:before{content:"";position:absolute;top:.77em;left:3px;width:7px;height:7px;border-radius:100%;background:var(--teal)}
+    .checklist{display:grid;gap:10px;margin:20px 0 13px}
+    .check{display:flex;align-items:flex-start;gap:12px;background:white;border:1px solid var(--line);padding:14px 15px;border-radius:12px;cursor:pointer}
+    .check:hover{border-color:#aacbc1}
+    .check input{margin-top:4px;width:21px;height:21px;accent-color:var(--teal);flex-shrink:0}
+    .check span{display:block}
+    .check small{display:block;color:var(--muted);font-size:.84rem;line-height:1.45;margin-top:2px}
+    .check input:checked + span>strong{text-decoration:line-through;text-decoration-color:#89a8a0;color:#70827e}
+    .progress{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:5px;font-size:.86rem;color:var(--muted);font-weight:700}
+    .bar{height:10px;border-radius:20px;background:#e1ebe7;overflow:hidden;margin-top:8px}
+    .bar span{display:block;height:100%;width:0%;background:linear-gradient(90deg,#196f6a,#5ba89b);border-radius:20px;transition:width .2s}
+    .soft{background:#fff5ef;border-color:#f0d8c9}
+    .soft strong{color:#9c5943}
+    .example{background:#f7faf8;border:1px solid #dfebe5;border-radius:13px;padding:16px 18px;margin-top:16px}
+    .example .tag{font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;font-weight:850;color:#557972}
+    .example p{margin:6px 0 0;color:#415953}
+    .delivery{position:relative;padding:23px;background:#fff;border:1px solid var(--line);border-radius:19px}
+    .delivery .phase{display:inline-block;font-size:.77rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:#23746a;background:#e9f4f0;border-radius:8px;padding:4px 9px;margin-bottom:10px}
+    .delivery p{margin:0;color:var(--muted)}
+    .delivery h3{margin:0 0 8px;font-size:1.2rem}
+    .delivery strong{color:var(--ink)}
+    .delivery.first{border:2px solid #75b5a7;background:#f4faf6}
+    .delivery.first .phase{background:var(--teal);color:white}
+    .timeline{display:grid;gap:13px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .section-list{list-style:none;padding:0;margin:0}
+    .section-list>li{border-top:1px solid #e7ece8;padding:11px 0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:15px;align-items:baseline}
+    .section-list>li:first-child{border-top:0}
+    .section-list strong{font-size:.97rem}
+    .section-list small{font-size:.79rem;color:#53716b;text-align:right}
+    .sub{display:block;padding-left:17px;color:var(--muted);font-size:.88rem;margin:3px 0 0}
+    .notes{margin-top:15px;color:var(--muted);font-size:.87rem}
+    .fine{color:var(--muted);font-size:.9rem}
+    .label{color:var(--teal);font-size:.74rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+    details{border:1px solid var(--line);border-radius:13px;background:#fff;margin-top:11px;overflow:hidden}
+    details[open]{border-color:#b7d7cb}
+    summary{cursor:pointer;padding:15px 19px;font-weight:750;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:1.5rem;color:var(--teal)}
+    details[open] summary:after{content:"−"}
+    details .answer{border-top:1px solid #e5eee8;padding:15px 19px 19px;color:var(--muted)}
+    details .answer p{margin:0}
+    details .answer p+p{margin-top:12px}
+    .source-list{display:grid;gap:11px;margin-top:16px}
+    .source{display:block;padding:17px 18px;border-radius:13px;background:#fff;border:1px solid var(--line);text-decoration:none}
+    .source strong{display:block;color:var(--ink)}
+    .source span{display:block;color:var(--muted);font-size:.88rem}
+    .source:hover{border-color:#95c5b8}
+    .bottom{margin-top:40px;border-radius:24px;background:#153f3c;color:white;padding:clamp(24px,6vw,42px)}
+    .bottom .kicker{color:#ace0d5}
+    .bottom h2{color:white}
+    .bottom p{color:#d4e8e3;max-width:650px}
+    .bottom .btn{background:#f8e5d7;color:#233f3b;border-color:#f8e5d7}
+    footer{padding:27px 0 34px;text-align:center;font-size:.78rem;color:#687977}
+    .small-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .small-steps>div{background:white;border:1px solid var(--line);border-radius:13px;padding:16px}
+    .small-steps strong{display:block;color:var(--teal-dark);margin-bottom:3px}
+    .small-steps span{display:block;color:var(--muted);font-size:.9rem}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:#193f3c;color:white;border-radius:50px;padding:10px 17px;font-weight:700;z-index:10;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .toplink{display:inline-block;text-decoration:none;font-weight:750;margin-top:18px;font-size:.92rem}
+    @media (max-width:700px){.grid,.grid.three,.timeline{grid-template-columns:1fr}.small-steps{grid-template-columns:1fr}.hero{padding-top:24px}.hero-note{margin-top:24px}.wrap{width:min(100% - 30px,930px)}.card,.panel{padding:21px}.section-list>li{grid-template-columns:1fr;gap:1px}.section-list small{text-align:left}.hero-actions .btn{flex-grow:1}section.section{padding-top:33px}}
+    @media (max-width:390px){h1{font-size:2.25rem}.card,.panel{padding:18px}.step{grid-template-columns:39px 1fr;gap:11px;padding:16px}.n{width:38px;height:38px}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    @media print{body{background:white}.hero{background:#fff}.toc,.hero-actions,.btn,.toast{display:none!important}.card,.panel,.step,.delivery,details{box-shadow:none;break-inside:avoid}.section{break-inside:avoid}.bottom{color:#172a2c;background:white;border:1px solid #ccc}.bottom h2,.bottom p{color:#172a2c}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <div class="wrap hero-inner">
+      <div class="eyebrow"><span class="mini-plus" aria-hidden="true">+</span> Tu guía para empezar</div>
+      <h1>Tu proyecto de <span class="hi">primeros auxilios</span>, paso a paso.</h1>
+      <p>Un trabajo teórico de FP en Word, cuatro entregas y una presentación. Parece mucho si lo miras todo de golpe; en realidad, podemos dividirlo en pasos muy concretos.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#empezar">Empezar por el paso 1 <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" href="#entregas">Ver las cuatro entregas</a>
+      </div>
+      <div class="hero-note"><span class="spark" aria-hidden="true">✦</span><div><strong>No tienes que escribir todo el trabajo ahora.</strong> Lo primero es reunir las instrucciones del profesor. Con eso podemos organizar el proyecto, preparar el documento de Word con el formato correcto y avanzar entrega a entrega.</div></div>
+      <nav class="toc" aria-label="Ir a un apartado">
+        <a href="#empezar">Cómo empezar</a><a href="#enviar">Qué enviar</a><a href="#indice">Índice</a><a href="#entregas">Entregas</a><a href="#word">IA y Word</a><a href="#dudas">Dudas frecuentes</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="section" id="empezar">
+      <div class="section-header"><span class="kicker">01 · Por dónde empezar</span><h2>Hoy solo hay que dar el primer paso</h2><p class="section-intro">La idea no es sentarse ante una página en blanco e intentar inventar todo el proyecto. Primero vemos lo que pide exactamente el profesor; después construimos el trabajo alrededor de esas condiciones.</p></div>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><div><h3>Reúne las instrucciones del profesor</h3><p>Busca la guía del proyecto, los criterios de evaluación, las fechas y las normas de presentación. Si están en un PDF, Word, correo o fotos de papel, nos sirven igualmente.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h3>Envíanoslo todo, sin tener que ordenarlo antes</h3><p>Podemos leer las especificaciones y extraer lo importante: número de páginas, tipo de letra, márgenes, apartados obligatorios, cómo citar fuentes, qué se espera en cada entrega, etc.</p></div></div>
+        <div class="step"><span class="n">3</span><div><h3>Decidimos el índice definitivo (o uno provisional)</h3><p>Preparamos un esquema sobre <strong>técnicas de primeros auxilios</strong> adaptado al ciclo y a la rúbrica. Si el profesor ya facilita un índice, utilizamos ese y no uno inventado.</p></div></div>
+        <div class="step"><span class="n">4</span><div><h3>Preparamos el primer Word, con su formato</h3><p>Se puede generar directamente un archivo <strong>.docx</strong> con portada, estilos, títulos, numeración, apartados desarrollados y bibliografía inicial. Tú lo revisas, propones cambios y ajustamos lo que sea necesario.</p></div></div>
+        <div class="step"><span class="n">5</span><div><h3>Seguimos un plan de cuatro entregas</h3><p>En cada nueva entrega, ampliamos y mejoramos el mismo proyecto; aplicamos lo que vaya corrigiendo el profesor y al final preparamos la exposición oral.</p></div></div>
+      </div>
+    </section>
+    <section class="section" id="enviar">
+      <div class="section-header"><span class="kicker">02 · Lo que necesito que me pases</span><h2>La lista de cosas que hay que reunir</h2><p class="section-intro">Puedes marcar lo que ya tienes. No pasa nada si alguna cosa aún no la sabes: trabajaremos con lo disponible, indicando claramente lo que falta confirmar.</p></div>
+      <div class="panel">
+        <div class="progress"><span>Tu checklist</span><span id="progress-label" aria-live="polite">0 de 8</span></div><div class="bar" role="progressbar" id="progress-bar" aria-label="Documentación reunida" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span id="progress-fill"></span></div>
+        <div class="checklist" id="checklist">
+          <label class="check"><input type="checkbox" data-check="1"><span><strong>Enunciado completo del proyecto</strong><small>El documento, PDF o fotografías de todo lo que haya entregado el profesor.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="2"><span><strong>Rúbrica o criterios de evaluación</strong><small>Qué se valora, qué apartados son obligatorios y cuánto puntúa cada cosa.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="3"><span><strong>Normas de formato del Word</strong><small>Tipo y tamaño de letra, interlineado, márgenes, portada, extensión, encabezados, números de página, etc.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="4"><span><strong>Fechas y contenido de las cuatro entregas</strong><small>Qué pide en cada una, cómo se envía y cuándo se entrega la versión final.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="5"><span><strong>Requisitos de la presentación</strong><small>Duración, número de diapositivas, si hay preguntas o defensa oral y qué se debe explicar.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="6"><span><strong>Nombre del ciclo y módulo</strong><small>Para ajustar vocabulario, nivel de profundidad y enfoque al grado medio concreto.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="7"><span><strong>Reglas sobre bibliografía, imágenes y uso de IA</strong><small>Si hay norma de citas (APA u otra), mínimo de fuentes, permisos de imágenes o condiciones sobre herramientas de IA.</small></span></label>
+          <label class="check"><input type="checkbox" data-check="8"><span><strong>Material o indicaciones adicionales</strong><small>Ejemplos de trabajos, apuntes, índice del profesor y cualquier corrección que ya te haya dado.</small></span></label>
+        </div>
+        <div class="example"><span class="tag">Para hacértelo fácil</span><p>Si lo tienes en papel, basta con hacer fotos <strong>legibles y completas</strong>. No hace falta copiarlo a mano. Si el profesor lo ha enviado como archivo, pásame directamente ese archivo. Y si falta alguna información, ya la identificaremos.</p></div>
+        <p class="notes">Las casillas se recuerdan en este navegador cuando vuelvas a abrir la página. No se envían a ningún sitio.</p>
+      </div>
+    </section>
+    <section class="section" id="indice">
+      <div class="section-header"><span class="kicker">03 · Cómo sería el proyecto</span><h2>Un índice inicial, pensado para un trabajo teórico</h2><p class="section-intro">Este es un ejemplo de estructura para un documento de Word sobre primeros auxilios. Es <strong>provisional</strong>: primero comprobaremos lo que exige el profesor.</p></div>
+      <div class="panel">
+        <ul class="section-list">
+          <li><div><strong>Portada</strong><span class="sub">Título del proyecto, ciclo, alumna, centro, curso y los datos que pidan.</span></div><small>Preparar desde el inicio</small></li>
+          <li><div><strong>Índice</strong><span class="sub">Capítulos y subapartados, actualizado a medida que crezca el trabajo.</span></div><small>Completo, provisional</small></li>
+          <li><div><strong>1. Introducción</strong><span class="sub">Qué son los primeros auxilios y por qué es importante conocerlos.</span></div><small>Entrega 1</small></li>
+          <li><div><strong>2. Objetivos y justificación</strong><span class="sub">Qué pretende explicar el trabajo y por qué se ha elegido este tema.</span></div><small>Entrega 1</small></li>
+          <li><div><strong>3. Metodología y fundamentos básicos</strong><span class="sub">Revisión documental; conducta PAS; protección de la escena; valoración inicial; cuándo avisar al 112 y límites de actuación.</span></div><small>Entrega 1</small></li>
+          <li><div><strong>4. Principales técnicas de primeros auxilios</strong><span class="sub">4.1 RCP y soporte vital básico · 4.2 DEA/DESA · 4.3 Atragantamiento · 4.4 Hemorragias y heridas · 4.5 Quemaduras · 4.6 Lesiones óseas y articulares · 4.7 Pérdida de consciencia · 4.8 Convulsiones · 4.9 Intoxicaciones · 4.10 Emergencias por temperatura.</span></div><small>Entregas 2 y 3</small></li>
+          <li><div><strong>5. Prevención y errores frecuentes</strong><span class="sub">Medidas para prevenir accidentes y prácticas que deben evitarse.</span></div><small>Entrega 3</small></li>
+          <li><div><strong>6. Conclusiones</strong><span class="sub">Síntesis de lo aprendido y de la importancia de actuar de forma segura.</span></div><small>Entrega 3 y revisión final</small></li>
+          <li><div><strong>7. Bibliografía</strong><span class="sub">Todas las fuentes verdaderamente consultadas y citadas, con el formato solicitado.</span></div><small>Desde la entrega 1</small></li>
+          <li><div><strong>8. Anexos (si hacen falta)</strong><span class="sub">Material complementario: esquemas, cuadros, imágenes o documentos demasiado extensos para el cuerpo del trabajo.</span></div><small>Cuando sean útiles</small></li>
+        </ul>
+      </div>
+      <div class="callout" style="margin-top:15px"><p><strong>La primera entrega no consiste en rellenar todos los apartados con cuatro frases.</strong> Es mejor presentar un índice general bien pensado y desarrollar de verdad los capítulos iniciales. Los capítulos pendientes pueden quedar anunciados como «pendiente de desarrollar en siguientes entregas», si el profesor permite entregas parciales.</p></div>
+    </section>
+    <section class="section" id="entregas">
+      <div class="section-header"><span class="kicker">04 · El calendario de trabajo</span><h2>Qué haremos en cada una de las cuatro entregas</h2><p class="section-intro">Es un reparto orientativo para un proyecto exclusivamente documental. Si el profesor ha distribuido los contenidos de otra forma, adaptaremos este plan a sus instrucciones.</p></div>
+      <div class="timeline">
+        <article class="delivery first"><span class="phase">Entrega 1 · Ahora</span><h3>La base del proyecto</h3><p><strong>Portada + índice provisional completo + introducción + objetivos + justificación + metodología y fundamentos.</strong> También una primera bibliografía, con lo que se haya consultado.</p><div class="example"><span class="tag">Objetivo</span><p>Que el profesor pueda confirmar que el enfoque y la estructura son correctos.</p></div></article>
+        <article class="delivery"><span class="phase">Entrega 2</span><h3>Primera mitad del contenido</h3><p>Incorporamos las correcciones y desarrollamos las primeras técnicas: RCP, DEA, atragantamiento, hemorragias, heridas y quemaduras (según índice final). Añadimos citas e ilustraciones útiles.</p></article>
+        <article class="delivery"><span class="phase">Entrega 3</span><h3>Trabajo casi terminado</h3><p>Completamos las demás técnicas, la prevención, las conclusiones y los anexos que aporten valor. Revisamos que no haya contradicciones ni información desactualizada.</p></article>
+        <article class="delivery"><span class="phase">Entrega 4 · Final</span><h3>Documento preparado para entregar</h3><p>Aplicamos los últimos comentarios, revisamos bibliografía y ortografía, actualizamos el índice y comprobamos páginas, márgenes, estilos y formato final.</p></article>
+      </div>
+      <div class="card" style="margin-top:15px"><div class="icon-box" aria-hidden="true">🎤</div><h3>¿Y después? La presentación</h3><p>Cuando el trabajo esté cerrado, podemos preparar también las <strong>diapositivas, un guion para explicar cada una y posibles preguntas del profesor</strong>. La exposición debe resumir el proyecto, no leer todo el Word.</p></div>
+    </section>
+    <section class="section" id="word">
+      <div class="section-header"><span class="kicker">05 · Qué podemos hacer con IA</span><h2>No tienes que saber maquetar un Word desde cero</h2><p class="section-intro">Con las especificaciones podemos preparar un archivo Word real, no solo un texto para copiar y pegar. El resultado se puede abrir y editar en Microsoft Word o en un editor compatible.</p></div>
+      <div class="grid three">
+        <div class="card"><div class="icon-box" aria-hidden="true">📄</div><h3>Crear el .docx</h3><p>Portada, tipografías, títulos, márgenes, interlineado, numeración y secciones siguiendo las instrucciones del profesor.</p></div>
+        <div class="card"><div class="icon-box" aria-hidden="true">🧭</div><h3>Ordenar las ideas</h3><p>Índice coherente, capítulos con el nivel apropiado para grado medio y redacción clara, sin relleno.</p></div>
+        <div class="card"><div class="icon-box" aria-hidden="true">🔍</div><h3>Investigar con fuentes</h3><p>Localizar guías fiables, contrastar recomendaciones y preparar las referencias bibliográficas verificables.</p></div>
+        <div class="card"><div class="icon-box" aria-hidden="true">✍️</div><h3>Mejorar el contenido</h3><p>Corregir errores, explicar mejor una técnica, ajustar extensión y mantener una estructura homogénea.</p></div>
+        <div class="card"><div class="icon-box" aria-hidden="true">🧩</div><h3>Integrar correcciones</h3><p>Si el profesor pide cambios, podemos modificar el mismo documento y preparar la siguiente entrega.</p></div>
+        <div class="card"><div class="icon-box" aria-hidden="true">🗣️</div><h3>Preparar la defensa</h3><p>Diapositivas, resumen, preguntas de ensayo y explicaciones adaptadas al tiempo disponible.</p></div>
+      </div>
+      <div class="callout" style="margin-top:16px"><p><strong>El flujo sería muy sencillo:</strong> tú me pasas las especificaciones → las revisamos → elaboramos el contenido con fuentes → genero el archivo Word con el formato requerido → tú lo lees, entiendes y revisas → corregimos → entregas la versión acordada.</p></div>
+      <div class="panel soft" style="margin-top:15px"><h3>Una cuestión importante sobre la IA</h3><p>La IA es muy útil para estructurar, redactar borradores y dar formato, pero <strong>puede equivocarse o inventar referencias</strong>. Por eso comprobaremos la información sanitaria y las fuentes antes de utilizarla. El trabajo final debe reflejar contenido que tú comprendas y puedas defender. Y si el centro tiene normas sobre el uso o la declaración de IA, hay que respetarlas; no podemos garantizar que una herramienta sea «indetectable» ni que sustituya tu aprendizaje.</p></div>
+    </section>
+    <section class="section" id="bibliografia">
+      <div class="section-header"><span class="kicker">06 · Dos partes que suelen crear dudas</span><h2>Bibliografía y anexos, sin complicaciones</h2></div>
+      <div class="grid">
+        <article class="card"><div class="icon-box" aria-hidden="true">📚</div><h3>Bibliografía: desde el primer día</h3><p>Cada vez que usemos una web, un libro o una guía, guardamos los datos de la fuente y la citamos donde corresponda. La lista crecerá con cada entrega. <strong>No es algo que debamos improvisar al final</strong>, y nunca incluiremos fuentes que no se hayan consultado.</p></article>
+        <article class="card"><div class="icon-box" aria-hidden="true">🗂️</div><h3>Anexos: solo cuando sean útiles</h3><p>Son materiales complementarios: esquemas detallados, tablas largas, imágenes explicativas o documentos de apoyo. Suelen ir después de la bibliografía, identificados como «Anexo I», «Anexo II»… <strong>No hay que inventarlos ni incluirlos por obligación</strong>, salvo que el profesor los exija.</p></article>
+      </div>
+      <div class="example"><span class="tag">Ejemplo concreto</span><p>Si en el capítulo sobre atragantamiento explicamos cómo reconocer la emergencia y los principios de actuación, una ilustración pequeña que ayude a entenderlo puede ir <strong>dentro del capítulo</strong>. Un póster grande o un esquema complementario podría ir al <strong>anexo</strong>. En ambos casos, se indica su fuente y se comprueban los permisos de uso.</p></div>
+      <div style="margin-top:24px"><h3>Fuentes sanitarias de referencia para investigar</h3><p class="fine" style="margin:0">Para un tema médico, usaremos fuentes institucionales y guías vigentes, no blogs aleatorios. Estas son opciones de partida, no una bibliografía inventada del trabajo:</p>
+        <div class="source-list">
+          <a class="source" target="_blank" rel="noopener noreferrer" href="https://www.erc.edu/science-research/guidelines/guidelines-2025/"><strong>European Resuscitation Council — Guías 2025 ↗</strong><span>Recomendaciones europeas sobre reanimación y primeros auxilios.</span></a>
+          <a class="source" target="_blank" rel="noopener noreferrer" href="https://www2.cruzroja.es/-/primeros-auxilios-basicos"><strong>Cruz Roja — Primeros auxilios básicos ↗</strong><span>Formación y materiales introductorios para adquirir conocimientos básicos.</span></a>
+        </div>
+        <p class="notes">Antes de incluir cualquier procedimiento concreto en el Word, verificaremos su versión vigente, su ámbito de aplicación y el nivel de actuación adecuado para personas sin formación sanitaria.</p>
+      </div>
+    </section>
+    <section class="section" id="dudas">
+      <div class="section-header"><span class="kicker">07 · Preguntas normales al empezar</span><h2>Por si algo todavía te preocupa</h2></div>
+      <details><summary>¿Tengo que tener escritos todos los apartados en la primera entrega?</summary><div class="answer"><p>No, salvo que el profesor lo exija expresamente. Lo más razonable es un índice completo pero provisional y los apartados iniciales bien elaborados. Mejor eso que una frase de relleno en cada capítulo.</p></div></details>
+      <details><summary>¿Y si el profesor cambia el índice o pide modificaciones?</summary><div class="answer"><p>Es parte normal del proceso. Conservamos el Word editable, cambiamos la estructura o desarrollamos los apartados que indique y actualizamos el índice. No hay que empezar desde cero.</p></div></details>
+      <details><summary>¿Cuántas páginas tiene que tener?</summary><div class="answer"><p>Las que indique el profesor. Si no hay extensión concreta, ajustaremos la profundidad al ciclo, a los criterios de evaluación y al tiempo de preparación. Muchas páginas no equivalen automáticamente a mejor trabajo.</p></div></details>
+      <details><summary>¿Debo explicar prácticas o inventar casos clínicos?</summary><div class="answer"><p>No. Si es un trabajo teórico, se puede basar en una revisión documental: explicar técnicas, principios de seguridad y recomendaciones documentadas. No hace falta afirmar que has practicado con pacientes, realizado encuestas o obtenido resultados que no existen.</p></div></details>
+      <details><summary>¿Es mejor escribir algo en todos los capítulos o avanzar por bloques?</summary><div class="answer"><p>Conviene diseñar primero el mapa completo y desarrollar por bloques. Así cada entrega tiene contenido sólido, fácil de revisar y coherente con la anterior.</p></div></details>
+      <details><summary>¿Y si nunca he hecho un Word con este formato?</summary><div class="answer"><p>No es un problema para empezar. Podemos generar el archivo .docx con los estilos y elementos necesarios. Tú lo abrirás, comprobarás cómo queda y podremos corregirlo según la plantilla del centro.</p></div></details>
+      <details><summary>¿Podré explicar el proyecto en la presentación?</summary><div class="answer"><p>Sí, siempre que lo trabajemos de forma que entiendas sus partes. Podemos preparar resúmenes en palabras sencillas y practicar preguntas. La IA ayuda a organizar, pero tu comprensión es imprescindible.</p></div></details>
+    </section>
+    <section class="section" id="hoy">
+      <div class="section-header"><span class="kicker">08 · Tu pequeña misión de hoy</span><h2>No hace falta hacer nada más por ahora</h2></div>
+      <div class="small-steps">
+        <div><strong>1. Busca el documento</strong><span>Las instrucciones originales del profesor.</span></div>
+        <div><strong>2. Reúne las normas</strong><span>Formato, fechas, rúbrica y requisitos de entrega.</span></div>
+        <div><strong>3. Envíalo tal cual</strong><span>PDF, Word, capturas o fotos claras. Lo revisamos y empezamos.</span></div>
+      </div>
+    </section>
+    <section class="bottom" aria-label="Mensaje final">
+      <span class="kicker">Lo importante</span>
+      <h2>No tienes que resolver todo el proyecto hoy.</h2>
+      <p>Tu primer paso es pasarme las especificaciones completas. A partir de ahí podemos preparar el índice, generar la primera versión del Word con el formato solicitado y avanzar por entregas, con tiempo para entenderlo y corregirlo.</p>
+      <button class="btn" type="button" id="copy-request">Copiar lo que tengo que enviar <span aria-hidden="true">↗</span></button>
+    </section>
+    <a href="#inicio" class="toplink">↑ Volver al principio</a>
+  </main>
+  <footer class="wrap">Guía de planificación de un proyecto teórico · Primeros auxilios · Octubre de 2026. El documento final se ajustará a las instrucciones reales del centro.</footer>
+  <div class="toast" role="status" aria-live="polite" id="toast">Texto copiado</div>
+  <script>
+    (function(){
+      var checks=Array.prototype.slice.call(document.querySelectorAll('[data-check]'));
+      var key='guia_primeros_auxilios_checks_v1';
+      var state={};
+      try{state=JSON.parse(localStorage.getItem(key)||'{}')||{}}catch(e){state={}}
+      checks.forEach(function(check){check.checked=!!state[check.getAttribute('data-check')];check.addEventListener('change',function(){state[check.getAttribute('data-check')]=check.checked;try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}update()})});
+      function update(){var done=checks.filter(function(c){return c.checked}).length;document.getElementById('progress-label').textContent=done+' de '+checks.length;document.getElementById('progress-fill').style.width=(done/checks.length*100)+'%';document.getElementById('progress-bar').setAttribute('aria-valuenow',String(done))}
+      update();
+      var toast=document.getElementById('toast');
+      document.getElementById('copy-request').addEventListener('click',function(){
+        var msg='Te envío la información del profesor para que podamos preparar mi proyecto teórico de grado medio sobre técnicas de primeros auxilios en Word. Incluyo el enunciado, la rúbrica, el formato que exige, las cuatro fechas de entrega, las indicaciones para la presentación y los demás documentos que tenga. Quiero empezar por una primera entrega bien estructurada y revisar el Word antes de entregarlo.';
+        function show(message){toast.textContent=message;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},3000)}
+        if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(msg).then(function(){show('Mensaje copiado ✓')},function(){show('No se pudo copiar. Puedes seleccionar el texto de esta página.')})}
+        else{var area=document.createElement('textarea');area.value=msg;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();try{document.execCommand('copy');show('Mensaje copiado ✓')}catch(e){show('Selecciona y copia el texto manualmente')}area.remove()}
+      });
+    })();
+  </script>
+</body>
+</html>
